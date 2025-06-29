@@ -27,3 +27,11 @@ for product in products:
 for k, v in max_price.items():
     print(f"{k} - id = {v['id']} price = {v['price']}")
 
+price_together = 0 # переменная, куда будем складывать цену всех товаров
+for product in products: # перебираем список товаров (словарей)
+    price_together += product["price"] # складываем значения ключа "price" в переменной
+print(f"Total amount of goods - {price_together}")
+
+
+
+
