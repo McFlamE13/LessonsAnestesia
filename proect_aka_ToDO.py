@@ -54,6 +54,9 @@ while True:
         else:
             for op in operations:
                 print(f"{op}")
+    else:
+         print("Ошибка: Введите число от 1 до 6.")
+
     
     
 
