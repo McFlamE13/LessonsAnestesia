@@ -48,6 +48,15 @@ while True:
                  print(f"Задача [{status_task_id}] отмеченна как выполненная")
             else:
                 print("Задача отсутсвует или вы ввели неверный номер задачи.")
+    elif choice == 5:
+        if not operations:
+            print("Список операций пуст")
+        else:
+            for op in operations:
+                print(f"{op}")
+    
+    
+
 
 
 
