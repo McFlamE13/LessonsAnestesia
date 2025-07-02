@@ -34,6 +34,26 @@ while True:
     elif choice == 6:
         print("Работа завершена")
         break
+    elif choice == 4:
+        if not tasks:
+            print("Задачи отсуствуют")
+        else:
+            print("Список задач:")
+            for k, v in tasks.items():
+                print(f"[{k}] {v['description']} - {v['status']}")
+            status_task_id = int(input("Введите номер задачи из списка выше, которую хотите завершить: "))
+            if status_task_id in tasks:
+                 tasks[id] = {"description": description, "status": "done"}
+                 operations.append(f"Изменение статуса {description} на 'Done' - выполнено")
+                 print(f"Вы отметили {description}, как выполненную")
+            else:
+                print("Задача отсутсвует или вы ввели неверный номер задачи.")
+
+
+
+        
+
+
         
 
 
