@@ -11,6 +11,7 @@ while True:
     print("6. Выход")
     choice = input("Выберите пункт меню (1 - 6): ")
     if choice.isdigit():
+        choice = int(choice)
         if choice == 1:
             description = input("Ваша задача: ")
             tasks[id] = {"description": description, "status": "none"}
@@ -59,6 +60,8 @@ while True:
             print("Ошибка: Введите число от 1 до 6.")
     else:
         print("Некорректно введен номер пункта меню")
+
+
 
     
     
