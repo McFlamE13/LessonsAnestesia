@@ -24,10 +24,16 @@ def robot(commands):
             y -= steps
     return (x, y)
 
-user_commands = [
-    ("right", 5),
-    ("forward", 3),
-    ("left", 2),
-    ("backward", 6)
-]
+user_commands = []
+
+steps = input("Сколько команд нужно выполнить? ")
+if not steps.isdigit():
+    print("Неверное значение")
+else:
+    steps = int(steps)
+    for i in range(1, steps + 1):   
+        action = input(f"Введите команду {i} (forward, backward, left, right): ")
+        count = int(input("Введите количество шагов: "))
+        user_commands.append((action, count))
 print(robot(user_commands))
+
