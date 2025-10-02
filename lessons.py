@@ -68,6 +68,29 @@ def not_danger(our_paths):
 our_path = not_danger(paths)
 print(f"Not danger path - {our_path}")
 
+character = {
+    "name": "",
+    "head": None,
+    "right hand": None,
+    "left hand": None
+    }
+character["name"] = input("Please enter name your character: ")
+def equip_character(slot, item):
+    if slot not in character:
+        print(f"Mistake! Slot {slot} off")
+        return
+    if character[slot] is not None:
+        print(f"Mistake! Slot {slot} already use")
+    else:
+        character[slot] = item
+        print(f"Slot {slot} equipment {item}")
+
+equip_character("right hand", "steel sword")
+
+
+
+
+
 
 
 
