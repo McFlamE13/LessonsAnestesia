@@ -48,6 +48,28 @@ else:
     print("We haves lapkis")
 
 
+paths = [
+    ("mountain_pass", 8),          
+    ("forest_trail", 3),           
+    ("river", 7),         
+    ("desert", 9),           
+    ("canyon", 6),           
+    ("plain", 2),             
+    ("swamp", 5)              
+]
+def not_danger(our_paths):
+    path_not_danger = our_paths[0][0]
+    min_danger = our_paths[0][1]
+    for paths in our_paths:
+        if paths[1] < min_danger:
+            min_danger = paths[1]
+            path_not_danger = paths[0]
+    return path_not_danger
+our_path = not_danger(paths)
+print(f"Not danger path - {our_path}")
+
+
+
 
 
     
