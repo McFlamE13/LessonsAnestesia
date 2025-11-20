@@ -51,3 +51,43 @@ for names in result:
 
 #print(f"{filter_students(students, min_score)}")
 
+def group_by_category(items):
+    result = {}
+    
+    for k in items: # перебираем Элементы списка
+        category = k.get("category") # переменная , которая имеет значение Ключа категррия , который мы возвращаем с помощью метОда гет
+        if category not in result: # если нет такого ключа в итоговом словаре, то
+            result[category] = [] # добавляем КЛюч в него в виде значния ключа "категирии"
+        result[category].append(k) #  а значение этого ключа - название продукта
+    
+    return result
+
+items = [{
+    "name": "apple",
+    "category": "fruits"
+},
+{
+    "name": "chicken",
+    "category": "meat",
+},
+{
+    "name": "potato",
+    "category": "vegetables"
+},
+{
+    "name": "banana",
+    "category": "fruits"
+},  
+{
+    "name": "veal",  # телятина
+    "category": "meat"   
+},
+{
+    "name": "tomato",  
+    "category": "vegetables"
+}]
+
+print(group_by_category(items))
+
+
+
